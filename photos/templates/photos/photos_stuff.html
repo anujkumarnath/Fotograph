@@ -1,0 +1,10 @@
+<div>
+	<form action="" name='search'>
+		<input type="text" name='query' placeholder="Caption"/>
+        <input type="submit" value="Search" />
+	</form>
+    	{% for photo in search_result %}
+        	<p>{{photo.fields.Caption}}</p>
+    		<img src="{{photo.fields.Photo.0.url}}" alt="" width='50%' height='50%'/>
+        {% endfor %}
+</div>
