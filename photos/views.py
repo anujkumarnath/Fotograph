@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from airtable import Airtable
 import os
 
@@ -11,3 +11,5 @@ def home_page(request):
     search_result=AT.get_all(formula="FIND('"+ user_query.lower() +"',LOWER({Caption}))")
     stuff_for_frontend={'search_result':search_result}
     return render(request, 'photos/photos_stuff.html', stuff_for_frontend)
+def add(request):
+    return redirect('/')
