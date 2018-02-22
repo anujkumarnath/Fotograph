@@ -9,7 +9,41 @@
         <title>Fotograph</title>
     </head>
     <body>
-
+		<div class='wrapper'>
+			<nav class='nav'>
+				<div class="container">
+					<div class="nav__menu">
+						<img width='56px' height='56px' src="https://www.icon2s.com/wp-content/uploads/2013/02/orange-camera-icon.png" alt="" />
+                        <a  class='nav__header' href="/">Fotograph</a>
+                        <div class='col-md-5 pull-right'>
+                        	<form class='form-inline' action="" name='search'>
+                        		<div class='form-group'>
+                        			<input class='form-control' type="text" name='query' placeholder="Caption" value='{{request.GET.query}}' />
+                                    <input class='btn btn-danger' type="submit" value="Search"/>
+                        		</div>
+                        	</form>
+                        </div>
+                        <button class='btn btn-danger'>Add photo</button>
+					</div>
+				</div>
+			</nav>
+            <section class='result'>
+            	<div class='container'>
+            		<div class='photos'>
+            			{% for photograph in search_result %}
+                        	<div class='photos__item'>
+                        		<i class='photos__item-star fa fa-star hide'></i>
+                                <p class='photos__item-rating hide'>{{photograph.fields.Rating}}/10</p>
+                                <img class='photos__item-image' src="{{photograph.fields.Photo.0.url}}" alt="" />
+                                <div class='photos__item-title'>
+                                	<p>{{photograph.fields.Caption}}</p>
+                                </div>
+                        	</div>
+                        {% endfor %}
+            		</div>
+            	</div>
+            </section>
+		</div>
 
 
 

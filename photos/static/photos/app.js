@@ -21,18 +21,18 @@ function modal() {
 }
 
 function main() {
-    $('.movies__item').hover(function() {
-        $(this).find('.movies__item-image').css({"filter": "brightness(20%)"});
-        $(this).find('.movies__item-star').toggleClass('hide');
-        $(this).find('.movies__item-rating').toggleClass('hide');
-        $(this).find('.movies__item-expander').toggleClass('hide');
-        $(this).find('.movies__item-delete-button').toggleClass('hide');
+    $('.photos__item').hover(function() {
+        $(this).find('.photos__item-image').css({"filter": "brightness(20%)"});
+        $(this).find('.photos__item-star').toggleClass('hide');
+        $(this).find('.photos__item-rating').toggleClass('hide');
+        $(this).find('.photos__item-expander').toggleClass('hide');
+        $(this).find('.photos__item-delete-button').toggleClass('hide');
     }, function() {
-        $(this).find('.movies__item-image').css({"filter": "brightness(100%)"});
-        $(this).find('.movies__item-star').toggleClass('hide');
-        $(this).find('.movies__item-rating').toggleClass('hide');
-        $(this).find('.movies__item-expander').toggleClass('hide');
-        $(this).find('.movies__item-delete-button').toggleClass('hide');
+        $(this).find('.photos__item-image').css({"filter": "brightness(100%)"});
+        $(this).find('.photos__item-star').toggleClass('hide');
+        $(this).find('.photos__item-rating').toggleClass('hide');
+        $(this).find('.photos__item-expander').toggleClass('hide');
+        $(this).find('.photos__item-delete-button').toggleClass('hide');
     });
 
     modal();

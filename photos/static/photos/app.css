@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     content: " ";
-	border-bottom: 0.5rem solid #FCAB07;
+	border-bottom: 0.5rem solid #721c24;
     z-index: 9999;
 }
 
@@ -63,10 +63,10 @@ body::before {
 .nav__header {
     margin-right: 2rem;
     margin-left: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1.2px;
-    font-family: 'Anton', sans-serif;
-    color: #fff;
+    font-family: cursive;
+    color: #7d9212;
     font-size: 2rem;
     text-decoration: none;
 }
@@ -111,7 +111,7 @@ body::before {
     height: auto;
 }
 
-.movies {
+.photos {
     padding: 3rem 0;
     border-radius: 4px;
     display: flex;
@@ -119,13 +119,13 @@ body::before {
     min-height: 100vh;
 }
 
-.movies__item {
+.photos__item {
     width: 33.33333%;
     border-radius: 4px;
     position: relative;
 }
 
-.movies__item-title {
+.photos__item-title {
     border-right: 1px solid #eee;
     border-left: 1px solid #eee;
     color: black;
@@ -136,7 +136,7 @@ body::before {
     margin-top: -3px;
 }
 
-.movies__item-image {
+.photos__item-image {
     transition: all 0.2s ease;
 	width: 100%;
     height: 45vw;
@@ -144,7 +144,7 @@ body::before {
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
 }
 
-.movies__item-star {
+.photos__item-star {
     z-index: 9998;
     color: #FAAA2B;
     top: 20%;
@@ -154,7 +154,7 @@ body::before {
     transform: translateX(-50%);
 }
 
-.movies__item-delete-button {
+.photos__item-delete-button {
     z-index: 9998;
     padding: 0 0.2rem;
     background: #333;
@@ -166,17 +166,17 @@ body::before {
     right: 1rem;
 }
 
-.movies__item-delete-button:hover {
+.photos__item-delete-button:hover {
 	cursor: pointer;
     transform: scale(1.3);
 }
 
-.movies__item-delete {
+.photos__item-delete {
     font-size: 1.4rem;
     color: #EA535D;
 }
 
-.movies__item-rating {
+.photos__item-rating {
     z-index: 9998;
     font-size: 5rem;
     font-family: Anton, sans-serif;
@@ -187,7 +187,7 @@ body::before {
     color: white;
 }
 
-.movies__item-expander {
+.photos__item-expander {
     font-weight: bold;
     font-size: 1.4rem;
 	text-decoration: none;
@@ -203,7 +203,7 @@ body::before {
     font-family: 'Open Sans', sans-serif;
 }
 
-.movies__item-expander:hover {
+.photos__item-expander:hover {
 	background: #FCAB07;
     cursor: pointer;
 }
@@ -237,11 +237,11 @@ body::before {
         font-size: 14px;
     }
 
-    .movies__item {
+    .photos__item {
         width: 50%;
     }
 
-    .movies__item-image {
+    .photos__item-image {
         height: 60vw;
     }
 }
@@ -251,15 +251,15 @@ body::before {
         font-size: 12px;
     }
 
-    .movies__item-image {
+    .photos__item-image {
         height: 100vw;
     }
 
-    .movies__item {
+    .photos__item {
         width: 100%;
     }
 }
 
-.movies__item.full-width {
+.photos__item.full-width {
     width: 100%;
 }
